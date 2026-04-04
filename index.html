@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+    <title>Repair Center | Expert Appliance Repair Center</title>
+    <meta name="description" content="Get Services For Air Conditioner Microwave Oven Dishwasher Dryer Refrigerator Television Washing Machine Repair Service" />
+    
+    <meta name="theme-color" content="#1E3A8A">
+    <link rel="icon" type="image/png" href="images/default.png" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Custom adjustments since we extracted CSS -->
+    <style>
+        .page-content { padding: 40px 20px; max-width: 1000px; margin: 0 auto; background: var(--white); border-radius: var(--radius-xl); box-shadow: var(--shadow-soft); margin-top: 50px; margin-bottom: 50px; line-height: 1.8; }
+        .page-content h1 { color: var(--deep-blue); font-size: 32px; margin-bottom: 20px; border-bottom: 3px solid var(--primary-light); display: inline-block; padding-bottom: 10px; }
+        .page-content h2 { color: var(--primary-blue); font-size: 24px; margin-top: 30px; margin-bottom: 15px; }
+        .page-content p { color: var(--text-muted); margin-bottom: 15px; font-size: 16px; }
+        .page-content ul { margin-bottom: 20px; padding-left: 20px; color: var(--text-muted); }
+        .page-content li { margin-bottom: 10px; }
+    </style>
+</head>
+<body id="home">
+
+<div id="splashScreen" class="splash-screen">
+    <div id="splashIcon" style="display: flex; align-items: center; justify-content: center; color: var(--primary-blue); font-size: 35px; font-weight: 900; animation: pulseSplash 1.5s infinite; text-transform: uppercase; letter-spacing: 1px; text-align: center;">
+        <span id="splashBrandText">Appliances <br/>Repair Center</span>
+    </div>
+</div>
+
+<header>
+    <a href="index.html" class="brand-logo" style="font-size: 18px;">
+        <span id="navBrandText">Repair Center</span>
+    </a>
+    
+    <nav class="top-nav">
+        <a href="index.html" class="active-link">Home</a>
+        <a href="about.html">About</a>
+        <div class="dropdown">
+            <a href="index.html#servicesGrid" class="dropbtn">Services ▾</a>
+            <div class="dropdown-content">
+                <a href="index.html#servicesGrid">AC</a>
+                <a href="index.html#servicesGrid">Refrigerator</a>
+                <a href="index.html#servicesGrid">Washing Machine</a>
+                <a href="index.html#servicesGrid">Television</a>
+                <a href="index.html#servicesGrid">Microwave Oven</a>
+            </div>
+        </div>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="header-controls">
+        <div class="header-contact">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            18004103131
+        </div>
+        <button class="header-book-btn" onclick="scrollToFormAndSelect('')">Book Now</button>
+    </div>
+</header>
+
+<div class="hero-wrapper">
+    <div class="hero-bg-shapes"></div>
+    <section class="section-grid">
+        <div class="panel brand-panel" id="brandPanel">
+            <h2 id="brandHeadline"><span id="heroBrandText">Appliances Repair Center</span></h2>
+            <p id="brandDescription">Expert Services For Air Conditioner, Refrigerator, Television, Washing Machine & More directly at your doorstep in Lucknow.</p>
+            <div class="trust-badges">
+                <span class="trust-badge"><span class="check-icon">✔</span> GST Registered Expert</span>
+                <span class="trust-badge"><span class="check-icon">✔</span> Fast Doorstep Service</span>
+                <span class="trust-badge"><span class="check-icon">✔</span> Upfront Pricing</span>
+            </div>
+        </div>
+
+        <div class="panel form-panel" id="bookingFormSection">
+            <h2>Book Service Now</h2>
+            <form id="queryForm">
+                <input type="text" name="name" placeholder="Enter Full Name" required autocomplete="name">
+                <input type="tel" name="phone" id="phoneField" placeholder="10-Digit Mobile Number" required inputmode="numeric" maxlength="10" autocomplete="tel">
+                <input type="text" name="city" id="cityField" placeholder="Your City" required autocomplete="address-level2">
+
+                <select name="appliance" id="applianceSelect" required>
+                    <option value="" disabled selected>Select Appliance Type</option>
+                    <option value="AC">Air Conditioner</option>
+                    <option value="Refrigerator">Refrigerator / Fridge</option>
+                    <option value="Washing Machine">Washing Machine</option>
+                    <option value="Microwave Oven">Microwave Oven</option>
+                    <option value="Television">Television (LED/Smart TV)</option>
+                    <option value="Dishwasher">Dishwasher</option>
+                    <option value="Cloth Dryer">Cloth Dryer</option>
+                </select>
+
+                <div class="select-row" id="typeRow" style="display:none;">
+                    <select name="appliance_type" id="typeSelect">
+                        <option value="" disabled selected>Select Type</option>
+                    </select>
+                </div>
+
+                <div class="select-row" id="problemRow" style="display:none;">
+                    <select name="problem" id="problemSelect">
+                        <option value="" disabled selected>Select Problem</option>
+                    </select>
+                </div>
+
+                <div id="costDisplay" class="cost-display">
+                    Estimated Visiting/Service Charge: ₹<span id="costAmount">300</span>
+                </div>
+
+                <button type="submit" id="formSubmit">Confirm Booking</button>
+            </form>
+        </div>
+    </section>
+</div>
+
+<section class="services-section">
+    <h2 class="section-title">Appliances We Repair</h2>
+    <div class="services" id="servicesGrid">
+        <div class="service" onclick="scrollToFormAndSelect('AC')">
+            <img src="images/ac.png" alt="Air Conditioner Repair" onerror="this.onerror=null; this.style.display='none';" class="service-img">
+            <h3>Air Conditioner</h3>
+            <p>AC servicing, gas charging, PCB repair, and deep cleaning for window & split ACs.</p>
+            <button class="card-book-btn" onclick="event.stopPropagation(); scrollToFormAndSelect('AC')">Book Now</button>
+        </div>
+        <div class="service" onclick="scrollToFormAndSelect('Refrigerator')">
+            <img src="images/ref.png" alt="Refrigerator Repair" onerror="this.onerror=null; this.style.display='none';" class="service-img">
+            <h3>Refrigerator</h3>
+            <p>Cooling issues, compressor repair, and gas refilling by certified technicians.</p>
+            <button class="card-book-btn" onclick="event.stopPropagation(); scrollToFormAndSelect('Refrigerator')">Book Now</button>
+        </div>
+        <div class="service" onclick="scrollToFormAndSelect('Washing Machine')">
+            <img src="images/wm.png" alt="Washing Machine Repair" onerror="this.onerror=null; this.style.display='none';" class="service-img">
+            <h3>Washing Machine</h3>
+            <p>Front-load, top-load, and semi-automatic machine repairs and part replacements.</p>
+            <button class="card-book-btn" onclick="event.stopPropagation(); scrollToFormAndSelect('Washing Machine')">Book Now</button>
+        </div>
+        <div class="service" onclick="scrollToFormAndSelect('Television')">
+            <img src="images/tv.png" alt="TV Repair" onerror="this.onerror=null; this.style.display='none';" class="service-img">
+            <h3>Television</h3>
+            <p>Expert repair for LED, LCD, and Smart TVs. Display and sound issues resolved.</p>
+            <button class="card-book-btn" onclick="event.stopPropagation(); scrollToFormAndSelect('Television')">Book Now</button>
+        </div>
+    </div>
+</section>
+
+<section class="about-section" id="about">
+    <h2 class="section-title">About Us</h2>
+    <div class="about-grid">
+        <div class="about-content panel">
+            <h3 style="font-size: clamp(24px, 4vw, 30px); color: var(--deep-blue); font-weight: 800; margin-bottom: 20px;">Your Trusted Appliance Experts in Lucknow</h3>
+            <p>Repair Center is an independent, proprietary business operating out of Thakur Ganj, Lucknow. We provide fast, reliable, and premium independent repair solutions for all major household appliances, specialising in Air Conditioners.</p>
+            <ul class="about-list">
+                <li><span class="check-icon">✔</span> GST Registered (09CUBPA8567P1ZY)</li>
+                <li><span class="check-icon">✔</span> Specialised Air Condition Services</li>
+                <li><span class="check-icon">✔</span> 100% Work Satisfaction Guaranteed</li>
+                <li><span class="check-icon">✔</span> Transparent & Upfront Pricing</li>
+            </ul>
+        </div>
+        <div class="about-stats">
+            <div class="stat-box panel">
+                <h4>9-8</h4>
+                <p>Working Hours</p>
+            </div>
+            <div class="stat-box panel">
+                <h4>100%</h4>
+                <p>Transparent</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="faq-section">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <details class="faq-item">
+        <summary>What is your service location and timings?</summary>
+        <div class="faq-content">We serve all areas around Lucknow. Out working hours are Monday to Sunday from 9:00 AM to 8:00 PM.</div>
+    </details>
+    <details class="faq-item">
+        <summary>How quickly can a technician visit?</summary>
+        <div class="faq-content">We strive to provide service based on availability at your location. Please call us to book your slot as early as possible.</div>
+    </details>
+</section>
+
+<section class="legal-section">
+    <h2 class="section-title">Legal & Policies</h2>
+    <div class="legal-grid">
+        <div class="legal-card panel">
+            <div>
+                <h3>Business Verification</h3>
+                <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 15px;">Verify our legitimate GST registration and business ownership credentials.</p>
+            </div>
+            <a href="verification.html" class="legal-btn">View Verification</a>
+        </div>
+        <div class="legal-card panel">
+            <div>
+                <h3>Refund Policy</h3>
+                <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 15px;">Read our clear guidelines regarding service refunds and guarantees.</p>
+            </div>
+            <a href="refund.html" class="legal-btn">Read Policy</a>
+        </div>
+        <div class="legal-card panel">
+            <div>
+                <h3>Privacy Policy</h3>
+                <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 15px;">Your data is secure with us. Learn how we collect and protect your information.</p>
+            </div>
+            <a href="privacy.html" class="legal-btn">Read Policy</a>
+        </div>
+        <div class="legal-card panel">
+            <div>
+                <h3>Terms of Service</h3>
+                <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 15px;">Review the terms, booking rules, and liability clauses governing our repairs.</p>
+            </div>
+            <a href="terms.html" class="legal-btn">Read Terms</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3 id="footerBrandText">Repair Center</h3>
+            <p>We are a private appliance repair platform. All services are performed by an independent, highly-skilled technician. We do not claim to be an official brand service center.</p>
+            <p><strong>Address:</strong> 418/910A, Garhi Peer Khan, Thakur Ganj, Lucknow – 226003</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <p><a href="verification.html" style="color: var(--primary-light); text-decoration: none;">Business Verification</a></p>
+            <p><a href="refund.html" style="color: var(--primary-light); text-decoration: none;">Refund Policy</a></p>
+            <p><a href="privacy.html" style="color: var(--primary-light); text-decoration: none;">Privacy Policy</a></p>
+            <p><a href="terms.html" style="color: var(--primary-light); text-decoration: none;">Terms of Service</a></p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Actions</h3>
+            <p>Call to Book: <a href="tel:18004103131" style="color:var(--accent-orange); font-weight:bold; text-decoration:none;">18004103131</a></p>
+            <p>Available Mon-Sun, 9:00 AM – 8:00 PM</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>Copyright © 2026. Designed for 24x7 Customer Service</p>
+    </div>
+</footer>
+
+<div class="bottom-action-bar">
+    <div class="bottom-action-container">
+        <a href="https://wa.me/9120992012?text=Hi" id="waFloatBtn" class="action-btn wa-btn" target="_blank" aria-label="WhatsApp Us">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.004-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+            Chat Now
+        </a>
+        <a href="tel:18004103131" class="action-btn call-btn" aria-label="Call Us">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            Call Now
+        </a>
+    </div>
+</div>
+
+<nav class="bottom-nav-bar">
+    <a href="index.html" class="nav-item active">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        <span>Home</span>
+    </a>
+    <a href="about.html" class="nav-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+        <span>About</span>
+    </a>
+    <a href="index.html#servicesGrid" class="nav-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        <span>Services</span>
+    </a>
+    <a href="contact.html" class="nav-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        <span>Contact</span>
+    </a>
+</nav>
+
+<script src="js/script.js?v=2" defer></script>
+</body>
+</html>
